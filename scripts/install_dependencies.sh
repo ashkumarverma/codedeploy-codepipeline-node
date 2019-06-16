@@ -1,9 +1,9 @@
 #!/bin/bash
 # update yum just in case
-yum update -y
+sudo yum install -y gcc-c++ make
 # get node into yum
-curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
+sudo curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
 # install node and npm in one line
-yum install -y nodejs
+sudo yum install nodejs
 # install pm2 to restart node app
-npm i -g pm2@2.4.3
+sudo npm i -g pm2@2.4.3
